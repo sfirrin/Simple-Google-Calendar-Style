@@ -1,3 +1,5 @@
+Note: if you want a full chrome app, rather than a user stylesheet, the same style is available in an app at https://github.com/sfirrin/Clean-Google-Calendar
+
 Setup instructions are at the bottom of this readme.
 
 Week view:
