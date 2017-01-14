@@ -62,8 +62,59 @@
     padding-bottom: 5px;
 }
 
+/* Expandable left sidebar by hovering over top left corner */
 #nav {
- 	display: none;   
+
+  display: block!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  margin: 0;
+
+  margin-left: 0 !important;
+
+  /* 3 lines */
+  background-image: linear-gradient(to bottom,
+  hsla(0, 0%, 63%, 0.05) 0%, hsla(0, 0%, 63%, 0) 15%,
+  hsla(0, 0%, 63%, 1) 16%, hsla(0, 0%, 63%, 1) 29%,
+  hsla(0, 0%, 63%, 0) 30%, hsla(0, 0%, 63%, 0) 45%,
+  hsla(0, 0%, 63%, 1) 46%, hsla(0, 0%, 63%, 1) 59%,
+  hsla(0, 0%, 63%, 0) 60%, hsla(0, 0%, 63%, 0) 75%,
+  hsla(0, 0%, 63%, 1) 76%, hsla(0, 0%, 63%, 1) 89%,
+  hsla(0, 0%, 63%, 0) 90%, hsla(0, 0%, 63%, 0) 100%);
+  background-size: 1em 41px;
+  background-repeat: no-repeat;
+  background-color: white;
+
+  /* size of the hover area */
+  width: 1em;
+  height: 41px;
+  transition: width 200ms ease-out;
+  will-change: width;
+
+}
+#nav:not(:hover)>* {
+  display: none;
+}
+#nav:hover {
+  height: 100vh;
+  width: 180px;
+  padding: 0 20px 0 ;
+  background-position: top right;
+  box-shadow: 5px 0 15px -7px #333;
+}
+
+.calListSquare{
+  border-radius: 50%;
+}
+
+#nav:hover ~ #maincell{
+  margin-left: 220px;
+}
+
+#maincell{
+  transition: margin-left 200ms;
 }
 
 #terms-and-privacy {
